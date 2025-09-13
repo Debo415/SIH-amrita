@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainable Shopping App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- Tabs -->
+  <div class="tabs">
+    <div class="tab active" onclick="openTab(event, 'Home')">Home</div>
+    <div class="tab" onclick="openTab(event, 'Rewards')">Rewards</div>
+    <div class="tab" onclick="openTab(event, 'Plans')">Plans</div>
+    <div class="tab" onclick="openTab(event, 'Profile')">Profile</div>
+  </div>
+
+  <!-- Notification -->
+  <div id="notification" class="notification"></div>
+
+  <!-- Home -->
+  <div id="Home" class="tab-content active">
+    <h3>🌱 Search Product</h3>
+    <input type="text" id="searchInput" placeholder="Enter product name">
+    <button onclick="searchProduct()">Search</button>
+    <div id="productResults"></div>
+  </div>
+
+  <!-- Rewards -->
+  <div id="Rewards" class="tab-content">
+    <h3>🎁 Available Rewards</h3>
+    <div id="rewardContainer"></div>
+  </div>
+
+  <!-- Plans -->
+  <div id="Plans" class="tab-content">
+    <h3>📦 Subscription Plans</h3>
+    <div id="planContainer"></div>
+  </div>
+
+  <!-- Profile -->
+  <div id="Profile" class="tab-content">
+    <h3>👤 Profile</h3>
+    <p id="profilePoints">🌟 Eco-Points: 150</p>
+
+    <!-- Badges -->
+    <h4>🏅 Badges</h4>
+    <div id="badgeContainer"></div>
+
+    <!-- Streak -->
+    <h4>🔥 Daily Streak</h4>
+    <p>You are on a <span id="streakCount">0</span>-day streak!</p>
+    <div id="streakBar">
+      <div id="streakProgress"></div>
+    </div>
+
+    <!-- Impact Stats -->
+    <h4>🌍 Your Impact</h4>
+    <ul>
+      <li>🌲 Trees Saved: <span id="treesSaved">0</span></li>
+      <li>💧 Water Conserved: <span id="waterSaved">0</span> L</li>
+      <li>🌬 CO₂ Reduced: <span id="co2Reduced">0</span> kg</li>
+    </ul>
+
+    <!-- Referral -->
+    <h4>🤝 Referral</h4>
+    <p>Referral Code: <span id="referralCode">ECO123</span> 
+      <button onclick="copyReferralCode()">Copy</button> 
+      <button onclick="shareReferral()">Share</button>
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
