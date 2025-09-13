@@ -1,1 +1,115 @@
+/* Dark mode styling */
+body {
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #333;
+}
+
+.tab {
+  padding: 15px 20px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.tab.active {
+  color: #00ff7f;
+  border-bottom: 3px solid #00ff7f;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.product-card, .reward-card, .plan-card, .profile-card {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #00ff7f;
+  border: none;
+  color: #121212;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+.notification.show { opacity: 1; }
+.notification.success { background-color: #00ff7f; color: #121212; }
+.notification.error { background-color: #ff3b3b; color: #121212; }
+
+input {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+}
+
+h3, h4 { color: #00ff7f; }
+
+.badge {
+  background-color: #00ff7f;
+  color: #121212;
+  padding: 3px 8px;
+  margin-right: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.metrics { display: flex; justify-content: space-between; margin-top: 10px; }
+.metric { text-align: center; flex: 1; }
+
+.pros-cons { display: flex; justify-content: space-between; margin-top: 10px; }
+.pros, .cons { width: 48%; }
+
+.recommendations button {
+  background-color: #444;
+  color: #00ff7f;
+}
+
+/* Streak bar */
+#streakBar {
+  background:#333;
+  border-radius:10px;
+  width:100%;
+  height:20px;
+}
+
+#streakProgress {
+  background:#00ff7f;
+  height:20px;
+  border-radius:10px;
+  width:0%;
+}
